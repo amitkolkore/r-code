@@ -1,0 +1,22 @@
+Experiments_LHS <- read.csv("~/TU Delft/Honours programme/Project/Data (q2)/Experiments_LHS.csv", header=FALSE)
+Exploration_LHS_Backbone <- read.csv("~/TU Delft/Honours programme/Project/Data (q4)/Exploration_LHS_Backbone.data", header=FALSE)
+`Exploration_LHS_Backbone+` <- read.csv("~/TU Delft/Honours programme/Project/Data (q4)/Exploration_LHS_Backbone+.data", header=FALSE)
+Exploration_LHS_ACF <- read.csv("~/TU Delft/Honours programme/Project/Data (q4)/Exploration_LHS_ACF.data", header=FALSE)
+`1_model_B_exp_0` <- read.csv("~/TU Delft/Honours programme/Project/Data (q4)/1_model_B_exp_0.csv")
+`1_model_B+_exp_0` <- read.csv("~/TU Delft/Honours programme/Project/Data (q4)/1_model_B+_exp_0.csv")
+`1_model_ACF_exp_0` <- read.csv("~/TU Delft/Honours programme/Project/Data (q4)/1_model_ACF_exp_0.csv")
+`1_model_B_0_exp1.2` <- read.csv("~/TU Delft/Honours programme/Project/Data (q4)/1_model_B_0_exp1.2.csv")
+`1_model_B+_0_exp1.2` <- read.csv("~/TU Delft/Honours programme/Project/Data (q4)/1_model_B+_0_exp1.2.csv")
+`1_model_ACF_0_exp1.2` <- read.csv("~/TU Delft/Honours programme/Project/Data (q4)/1_model_ACF_0_exp1.2.csv")
+
+df1 = data.frame(`1_model_B_exp_0`$Chosen_instrument, `1_model_B_0_exp1.2`$Chosen_instrument)
+m1 = matrix(unlist(df1), nrow = 2)
+matplot(t(m1), type = 'l')
+
+df2 = data.frame(`1_model_B+_exp_0`$Chosen_instrument, `1_model_B+_0_exp1.2`$Chosen_instrument)
+m2 = matrix(unlist(df2), nrow = 2)
+matplot(t(m2), type = 'l')
+
+df3 = data.frame(`1_model_ACF_exp_0`$Chosen_instrument, `1_model_ACF_0_exp1.2`$Chosen_instrument)
+m3 = matrix(unlist(df3), nrow = 2)
+matplot(t(m3), type = 'l')
